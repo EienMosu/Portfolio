@@ -1,0 +1,118 @@
+.intro {
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 120%;
+      height: 120%;
+      background-color: #ff0505;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      float: right;
+
+      img {
+        width: 66%;
+      }
+
+    }
+    @media screen and (max-width: 1439px) {
+      flex: 0;
+    }
+  }
+
+  .right {
+    flex: 0.5;
+    display: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+      }
+
+      h2 {
+        font-size: 35px;
+      }
+
+      h3 {
+        font-size: 30px;
+
+        .ityped-cursor {
+          font-size: 2.2rem;
+          opacity: 1;
+          -webkit-animation: blink 0.5s infinite;
+          -moz-animation: blink 0.5s infinite;
+          animation: blink 0.5s infinite;
+          animation-direction: alternate;
+          color: #000;
+        }
+
+        @keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-webkit-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-moz-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        span {
+          font-size: 30px;
+          color: #ff0505;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+
+      img {
+        width: 40px;
+        animation: arrowBlink 2s infinite;
+      }
+
+      @keyframes arrowBlink {
+        to {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("https://cutewallpaper.org/21/gif-wallpaper-anime/Pin-by-Buu-Dang-on-iPhone-6S-Plus-Wallpapers-Must-to-Have-in-.gif");
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: white;
+  }
+}
