@@ -70,14 +70,11 @@ const Portfolio = () => {
       <div className="container">
         {data.map((data) => (
           <a href={data.link}>
-        <div className="item">
-        <img
-          src= {data.img}
-          alt=""
-        />
-        <h3>{data.title}</h3>
-      </div>
-      </a>
+            <div className="item">
+              <img src={data.img} alt="" />
+              <h3>{data.title}</h3>
+            </div>
+          </a>
         ))}
       </div>
     </div>
