@@ -6,19 +6,18 @@
   position: relative;
 
   .arrow {
-      height: 50px;
-      position: absolute;
-      cursor: pointer;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
 
-      &.left {
-          left: 10rem;
+    &.left {
+      left: 10rem;
+    }
 
-      }
-
-      &.right {
-          right: 10rem;
-          transform: rotate(-180deg);
-      }
+    &.right {
+      right: 10rem;
+      transform: rotate(-180deg);
+    }
   }
 
   .slider {
@@ -76,11 +75,13 @@
             p {
               font-size: 13px;
             }
-            span {
-              font-size: 12px;
-              font-weight: 600;
-              text-decoration: underline;
-              cursor: pointer;
+            a {
+              span {
+                font-size: 12px;
+                font-weight: 600;
+                text-decoration: underline;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -92,7 +93,6 @@
           align-items: center;
           display: flex;
           overflow: hidden;
-          
 
           img {
             width: 450px;
