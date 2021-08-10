@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import "./portfolio.scss";
+
 import PortfolioList from "../portfolioList/PortfolioList";
+
+import {
+  javascriptPortfolio,
+  pythonPortfolio,
+  reactPortfolio,
+  featuredPortfolio,
+} from "../../data";
 
 const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
+  const [data, setData] = useState([]);
 
   const list = [
     {
@@ -24,12 +34,32 @@ const Portfolio = () => {
     },
   ];
 
+  useEffect(() => {
+    switch (selected) {
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "react":
+        setData(reactPortfolio);
+        break;
+      case "python":
+        setData(pythonPortfolio);
+        break;
+      case "javascript":
+        setData(javascriptPortfolio);
+        break;
+      default:
+        setData(featuredPortfolio);
+    }
+  }, [selected]);
+
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
+            key={item.id}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -38,41 +68,17 @@ const Portfolio = () => {
         ))}
       </ul>
       <div className="container">
+        {data.map((data) => (
+          <a href={data.link}>
         <div className="item">
-          <img
-            src="https://c4.wallpaperflare.com/wallpaper/963/324/861/persona-4-persona-3-persona-series-persona-5-wallpaper-preview.jpg"
-            alt=""
-          />
-          <h3>Github</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://c4.wallpaperflare.com/wallpaper/963/324/861/persona-4-persona-3-persona-series-persona-5-wallpaper-preview.jpg"
-            alt=""
-          />
-          <h3>Github</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://c4.wallpaperflare.com/wallpaper/963/324/861/persona-4-persona-3-persona-series-persona-5-wallpaper-preview.jpg"
-            alt=""
-          />
-          <h3>Github</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://c4.wallpaperflare.com/wallpaper/963/324/861/persona-4-persona-3-persona-series-persona-5-wallpaper-preview.jpg"
-            alt=""
-          />
-          <h3>Github</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://c4.wallpaperflare.com/wallpaper/963/324/861/persona-4-persona-3-persona-series-persona-5-wallpaper-preview.jpg"
-            alt=""
-          />
-          <h3>Github</h3>
-        </div>
+        <img
+          src= {data.img}
+          alt=""
+        />
+        <h3>{data.title}</h3>
+      </div>
+      </a>
+        ))}
       </div>
     </div>
   );
