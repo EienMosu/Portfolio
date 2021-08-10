@@ -171,3 +171,27 @@ export const javascriptPortfolio = [
     link: "https://github.com/EienMosu/Simon-Game",
   },
 ];
+
+export const worksData = [
+  {
+    id: 1,
+    icon: "./assets/",
+    title: "title",
+    desc: "desc",
+    img: "img",
+  },
+  {
+    id: 2,
+    icon: "./assets/",
+    title: "title",
+    desc: "desc",
+    img: "img",
+  },
+  {
+    id: 3,
+    icon: "./assets/",
+    title: "title",
+    desc: "desc",
+    img: "img",
+  },
+];
