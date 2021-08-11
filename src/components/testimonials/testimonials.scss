@@ -1,3 +1,124 @@
+@import "../../global.scss";
+
 .testimonials {
-    background-color: #F5C6AA;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    justify-content: space-around;
+  }
+
+  h1 {
+    font-size: 50px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card {
+      width: 250px;
+      height: 70%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px -8px black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+      transition: all 0.3s ease;
+
+      @include mobile {
+        height: 50%;
+        margin: 10px 0;
+      }
+
+      &.featured {
+        width: 300px;
+        height: 75%;
+        margin: 0 30px;
+
+        @include mobile {
+          width: 250px;
+          height: 75%;
+          margin: 1px;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          &.left,
+          &.right {
+            height: 25px;
+          }
+          &.user {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 30px;
+
+            @include mobile {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+
+      .center {
+        padding: 10px;
+        background-color: rgb(230, 224, 225);
+        border-radius: 10px;
+
+        @include mobile {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+          margin-bottom: 5px;
+
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+        h4 {
+          color: gray;
+
+          @include mobile {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -198,3 +198,31 @@ export const worksData = [
     link: "https://github.com/EienMosu/Netflix-CloneMERN",
   },
 ];
+
+export const testimonialsData = [
+  {
+    id: 1,
+    name: "Burak Sahin",
+    title: "Youtuber",
+    img: "https://scontent.fskp4-2.fna.fbcdn.net/v/t1.6435-9/45805331_1418858331578848_2637355390009868288_n.jpg?_nc_cat=109&ccb=1-4&_nc_sid=09cbfe&_nc_ohc=I_CZ4v7tFp0AX9QL0Rp&_nc_ht=scontent.fskp4-2.fna&oh=7fd9d3077ac1a7978e0377d77a705154&oe=6139EAC4",
+    icon: "assets/youtube.png",
+    desc: "lorem",
+  },
+  {
+    id: 2,
+    name: "Burak Sahin",
+    title: "Burak Oyunda/3.4m Subs/Youtuber",
+    img: "https://scontent.fskp4-2.fna.fbcdn.net/v/t1.6435-9/45805331_1418858331578848_2637355390009868288_n.jpg?_nc_cat=109&ccb=1-4&_nc_sid=09cbfe&_nc_ohc=I_CZ4v7tFp0AX9QL0Rp&_nc_ht=scontent.fskp4-2.fna&oh=7fd9d3077ac1a7978e0377d77a705154&oe=6139EAC4",
+    icon: "assets/youtube.png",
+    desc: "Content will added!",
+    featured: true,
+  },
+  {
+    id: 3,
+    name: "Burak Sahin",
+    title: "Youtuber",
+    img: "https://scontent.fskp4-2.fna.fbcdn.net/v/t1.6435-9/45805331_1418858331578848_2637355390009868288_n.jpg?_nc_cat=109&ccb=1-4&_nc_sid=09cbfe&_nc_ohc=I_CZ4v7tFp0AX9QL0Rp&_nc_ht=scontent.fskp4-2.fna&oh=7fd9d3077ac1a7978e0377d77a705154&oe=6139EAC4",
+    icon: "assets/youtube.png",
+    desc: "lorem",
+  },
+];

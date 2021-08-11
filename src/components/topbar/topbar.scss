@@ -52,6 +52,10 @@
         align-items: center;
         margin-right: 20px;
 
+        @include mobile {
+          display: none;
+        }
+
         .icon {
           font-size: 18px;
           margin-right: 5px;

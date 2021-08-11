@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .works {
   background-color: #f8e2cf;
   display: flex;
@@ -10,12 +12,16 @@
     position: absolute;
     cursor: pointer;
 
+    @include mobile {
+      display: none;
+    }
+
     &.left {
-      left: 10rem;
+      left: 30px;
     }
 
     &.right {
-      right: 10rem;
+      right: 30px;
       transform: rotate(-180deg);
     }
   }
@@ -26,6 +32,12 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-in-out;
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .container {
       width: 100vw;
@@ -42,6 +54,12 @@
         align-items: center;
         justify-content: center;
 
+        @include mobile {
+          width: 70%;
+          height: 70%;
+          margin: 15px 0;
+        }
+
         .left {
           flex: 4;
           height: 100%;
@@ -56,6 +74,11 @@
             flex-direction: column;
             justify-content: space-between;
 
+            @include mobile {
+              width: 90%;
+              height: 90%;
+            }
+
             .imgContainer {
               width: 40px;
               height: 40px;
@@ -66,15 +89,32 @@
               align-items: center;
               overflow: hidden;
 
+              @include mobile {
+                width: 20px;
+                height: 20px;
+              }
+
               img {
                 width: 25px;
+
+                @include mobile {
+                  width: 15px;
+                }
               }
             }
             h2 {
               font-size: 20px;
+
+              @include mobile {
+                font-size: 13px;
+              }
             }
             p {
               font-size: 13px;
+
+              @include mobile {
+                font-size: 10px;
+              }
             }
             a {
               span {

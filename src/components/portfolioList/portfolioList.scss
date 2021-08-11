@@ -8,6 +8,10 @@
   cursor: pointer;
   overflow: hidden;
 
+  @include mobile {
+    margin-right: 20px;
+  }
+
   &.active {
     background-color: $mainColor;
     color: white;
